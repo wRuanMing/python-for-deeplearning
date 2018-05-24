@@ -1,0 +1,7 @@
+datasetformat.py用于转换图像分类数据库格式
+
+python datasetformat.py -d data\xxx
+将xxx文件夹下的图像按照xxx_labels.csv中保存的name和label的对应关系为xxx数据库自动按label划分图像文件。
+
+python datasetformat.py -d data\xxx -t True
+将xxx文件夹下的图像按照子文件夹的名称作为label生成图像name和label对应关系的xxx_labels.csv，并将子文件夹中的图像合并到一个xxx_imgs的文件夹中
