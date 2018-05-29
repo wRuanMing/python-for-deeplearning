@@ -46,7 +46,7 @@ def imgscsv2folder(datadir):
     imgs_folder = os.path.join(datadir, os.path.basename(datadir) + '_imgs')
     for img_name, img_label in csv_data.values:
         img_path_name = os.path.join(imgs_folder, img_name)
-        folder_imglabel = os.path.join(datadir, img_label)
+        folder_imglabel = os.path.join(datadir, str(img_label))
         if not os.path.exists(folder_imglabel):
             os.mkdir(folder_imglabel)
         shutil.move(img_path_name, folder_imglabel)   
